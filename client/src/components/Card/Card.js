@@ -1,16 +1,15 @@
 import * as React from 'react';
+import {Link} from "react-router-dom";
+
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
-
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-
 
 
 const bull = (
@@ -35,12 +34,12 @@ function Card_f() {
                             theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
                     }}
                 >
-                    <Grid container spacing={20} >
+                    <Grid container spacing={20}>
 
-                        <Grid item xs={12} sm container >
-                            <Grid item xs container direction="column" spacing={20} >
+                        <Grid item xs={12} sm container>
+                            <Grid item xs container direction="column" spacing={20}>
                                 <Grid item xs>
-                                    <Typography gutterBottom variant="subtitle1" component="div" >
+                                    <Typography gutterBottom variant="subtitle1" component="div">
                                         Main Categories
                                     </Typography>
                                     <Typography gutterBottom variant="subtitle1" component="div">
@@ -62,11 +61,13 @@ function Card_f() {
                         </Grid>
                         <Grid item>
 
-                                <CardActions>
-                                    <Stack spacing={2} direction="row" margin={1}>
+                            <CardActions>
+                                <Stack spacing={2} direction="row" margin={1}>
+                                    <Link to="/categorymanagement">
                                         <Button variant="contained">Category Management</Button>
-                                    </Stack>
-                                </CardActions>
+                                    </Link>
+                                </Stack>
+                            </CardActions>
 
                         </Grid>
                     </Grid>

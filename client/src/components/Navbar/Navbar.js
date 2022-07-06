@@ -53,7 +53,7 @@ function Navbar() {
                                 Click to sign out!
                             </Typography>
                             <Stack spacing={2} direction="row" margin={2} alignItems={"center"}>
-                                <Button variant="outlined" color="error" onClick={handleLogout}>Log out</Button>
+                                <Button variant="contained" color="error" onClick={handleLogout}>Log out</Button>
                             </Stack>
                         </Box>
                     </Modal>
