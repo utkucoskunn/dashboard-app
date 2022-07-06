@@ -5,13 +5,25 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import {AuthProvider} from "./contexts/AuthContext";
+import {QueryClient, QueryClientProvider, useQuery} from 'react-query';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            refetchOnMount: false,
+        }
+    }
+});
+
 root.render(
     <React.Fragment>
-        <AuthProvider>
-            <App/>
-        </AuthProvider>
+        <QueryClientProvider client={queryClient}>
+            <AuthProvider>
+                <App/>
+            </AuthProvider>
+        </QueryClientProvider>
     </React.Fragment>
 );
 
